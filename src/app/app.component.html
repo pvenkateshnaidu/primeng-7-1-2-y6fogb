@@ -1,0 +1,20 @@
+<ng-container *ngIf="filteredData$ | async as filteredData; else loading">
+  <p-autoComplete [(ngModel)]="cdsidvalue" [suggestions]="filteredData"
+    (completeMethod)="filterString$.next($event.query)" field="name" [size]="16" placeholder="Menu" [minLength]="1">
+    <ng-template let-menu pTemplate="item">
+      <div (click)="preventSelect($event, menu.disabled)" [ngStyle]="menu.styles" [class.enabled]='menu.disabled'>{{
+        menu.name
+        }}
+      </div>
+    </ng-template>
+
+  </p-autoComplete>
+
+  <p>Type 't'</p>
+</ng-container>
+
+
+<ng-template #loading>
+  Please wait while we rethrive data...
+</ng-template>
+<!-- <pre>{{ filteredData$ | async | json  }}</pre> -->

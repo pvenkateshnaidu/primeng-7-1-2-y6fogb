@@ -1,0 +1,23 @@
+/* Add application styles & imports to this file! */
+
+
+
+body .ui-autocomplete-panel .ui-autocomplete-items .ui-autocomplete-list-item {
+  padding: 0;
+  padding-left: 0.48rem;
+  cursor: default;
+
+}
+
+body .ui-autocomplete-panel .ui-autocomplete-items .ui-autocomplete-list-item.ui-state-highlight {
+  background: none;
+}
+
+body .ui-autocomplete-panel .ui-autocomplete-items .ui-autocomplete-list-item .enabled:hover {
+  background: lightblue !important;
+  cursor: pointer;
+}
+body .ui-autocomplete-panel .ui-autocomplete-items .ui-autocomplete-list-item div {
+  padding-top: 0.26rem !important;
+  padding-bottom: 0.26rem !important;
+}
